@@ -1,10 +1,5 @@
 modules:
-    #menu module
-    menu: 
-        index: [index]
-        item: [index, add, edit, delete]
-        menu: [index, add, edit, delete]
-        
+
     #admin module
     admin: 
         index: [index, add, edit, delete]
@@ -15,34 +10,6 @@ modules:
     dashbord: 
         index: [index]
     
-    #help module
-    help:
-        index: [index, view]
-    
-    #dev module
-    dev: 
-        index: [index]
-        404: [index]
-        maintenance: [index]
-        error: [index]
-        
-    #report module
-    report: 
-        index: [index]
-        404: [index]
-        maintenance: [index]
-        error: [index]
-    
     #configuration module
     configuration: 
         index: [index]
-    
-    #menu module
-    content: 
-        index: [index]
-        type: [index, add, edit, delete]
-        content: [index, add, edit, delete]
-        
-         #path module
-    path: 
-        index: [index, add, edit, delete]
