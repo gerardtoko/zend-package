@@ -1,0 +1,23 @@
+/*
+    Document   : style
+    Created on : 17 mars 2012, 08:18:25
+    Author     : gerardtoko
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.a:hover{ text-decoration: none}
+input{ height: 35px; padding: 0 10px}
+.operation{text-align: left ;}
+.container-app{ margin-top: 60px; padding: 0 40px}
+.table { font-size: 13px;}
+#top-content{ margin: 20px 0;  border-bottom: solid 1px #DDDDDD; padding: 5px}
+#top-content h1{ display: inline}
+#top-content span{ float: right; margin-left:20px;}
+.navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner { padding: 0 40px}
+.dropdown-wrapper{ position: absolute; right: 0px;}
+.container,.navbar-fixed-top .container{width: auto}
+ul, li { list-style: none; padding: 0; margin: 0}
+.login-wrapper{ width: 330px; position: absolute; left: 50%; margin-left: -160px; top: 50%; margin-top: -130px}
+.login-title{text-align: center; margin-bottom: 20px}
+.login-wrapper .checkbox{ float: right ; }

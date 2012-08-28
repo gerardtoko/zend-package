@@ -1,0 +1,4 @@
+#template configuration
+default: default
+current: default
+list: [default]

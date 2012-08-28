@@ -1,0 +1,55 @@
+    <div class="operation-wrapper">
+        <div class="btn-group group-jimmy">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><?php echo ucfirst($this->t('display by page')) ?>
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="ajax" href="<?php echo $this->limit30__ ?>">30  <?php echo $this->t('by page') ?></a></li>
+                <li><a class="ajax" href="<?php echo $this->limit60__ ?>">60  <?php echo $this->t('by page') ?></a></li>
+                <li><a class="ajax" href="<?php echo $this->limit90__ ?>">90 <?php echo $this->t('by page') ?></a></li>
+                <li><a class="ajax" href="<?php echo $this->limit120__; ?>">120 <?php echo $this->t('by page') ?></a></li>
+                <li><a class="ajax" href="<?php echo $this->limit240__; ?>">240 <?php echo $this->t('by page') ?></a></li>
+
+            </ul>
+        </div>
+
+        <a href="<?php echo $this->refresh_ ?>" class="btn ajax"><i class="icon-refresh"></i> <?php echo ucfirst($this->t('refresh')) ?></a>
+
+        <div class="btn-group">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><?php echo ucfirst($this->t('option')) ?> <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dell_button"><?php echo ucfirst($this->t('delete')) ?> </a></li>
+            </ul>
+        </div>
+
+        <a onclick="print_page()" class="btn print-btn"><i class="icon-file"></i> <?php echo ucfirst($this->t('print')) ?></a> 
+
+    </div>
+    <span class="badge-wrapper" >
+        <span class="badge badge-info">Page <?php echo $this->page__ ?> <?php echo $this->t('on') ?> <?php echo $this->paginitionMax__ ?></span>
+        <span class="badge badge-info"><?php echo $this->limit__ ?> <?php echo ucfirst($this->t('record')) ?>(s) <?php echo $this->t('by page') ?></span>
+        <span class="badge badge-info"><?php echo $this->count__ ?> <?php echo ucfirst($this->t('record')) ?>(s)</span>
+        <span class="checkboxall-btn checkboxall btn"><?php echo ucfirst($this->t('select all')) ?></span>
+
+    </span> 
+
+    <div class="pagination-wrapper">
+        <div class="pagination">
+            <ul>
+                <?php if (isset($this->paginitionPrev__)) : ?>
+                    <li><a href="<?php echo $this->paginitionPrev__ ?>"><?php echo ucfirst($this->t('previous')) ?></a></li>
+                <?php endif ?>
+
+                <?php foreach ($this->paginition__ as $value) : ?>
+                    <li <?php if (isset($value['class'])) : ?> class="<?php echo $value['class'] ?>" <?php endif ?>>
+                        <a href="<?php echo $value['link'] ?>"><?php echo $value['content'] ?></a>
+                    </li>
+                <?php endforeach; ?>
+
+                <?php if (isset($this->paginitionNext__)) : ?>
+                    <li><a href="<?php echo $this->paginitionNext__ ?>"><?php echo ucfirst($this->t('next')) ?></a></li>
+                <?php endif ?>
+            </ul>
+        </div>
+    </div>

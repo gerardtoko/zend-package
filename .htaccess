@@ -1,0 +1,95 @@
+# By default allow all access
+#   order deny,allow
+#        deny from all
+#        allow from 80.12.81.16 81.57.107.23 
+
+Options -MultiViews
+
+DirectoryIndex index.php
+ErrorDocument 404 index.php
+
+#configuration utf-8
+AddDefaultCharset UTF-8
+
+<IfModule mod_php5.c>
+
+    #augmentation de la memoire du serveur
+    php_value memory_limit 256M
+    php_value max_execution_time 18000
+
+    php_flag magic_quotes_gpc off
+
+    # on desactive le demarage de session automatique
+    php_flag session.auto_start off
+
+    php_flag suhosin.session.cryptua off
+    php_flag zend.ze1_compatibility_mode Off
+
+    # en cas de probleme avec apc desactive APC
+    # sinon active apc
+    php_flag apc.cache_by_default On
+
+    # Types de contenus a compresser
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE image/svg+xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/atom_xml
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/x-httpd-php
+    AddOutputFilterByType DEFLATE application/x-httpd-fastphp
+    AddOutputFilterByType DEFLATE application/x-httpd-eruby
+
+    # Activation du filtre de compression
+    SetOutputFilter DEFLATE
+
+    # Netscape 4.x a quelques soucis, on ne compresse que le html
+    BrowserMatch ^Mozilla/4 gzip-only-text/html
+
+    # Les versions de Netscape 4.06-4.08 ont quelques soucis
+    BrowserMatch ^Mozilla/4\.0[678] no-gzip
+
+    # Comme d'habitude, internet explorer pose probleme
+    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+
+    # Ne pas compresser ce type de fichiers
+    SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzip dont-vary
+    SetEnvIfNoCase Request_URI \.(?:exe|t?gz|zip|bz2|sit|rar)$ no-gzip dont-vary
+    SetEnvIfNoCase Request_URI \.(?:pdf|avi|mov|mp3|mp4|rm)$ no-gzip dont-vary
+
+    #compression des fichiers
+    php_flag zlib.output_compression on
+
+</IfModule>
+
+
+<IfModule mod_rewrite.c>
+
+    Options +FollowSymLinks
+
+    #activation rewrite
+    RewriteEngine on
+
+    # authentification http
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # on autorise les fichiers statiques
+    RewriteCond %{REQUEST_URI} !\.(js|ico|txt|gif|jpg|jpeg|png|css|html|xhtml)
+    RewriteRule ^.*$ index.php [NC,L]
+
+    #minify configuration
+    RewriteRule ^([bfg]=.*) lib/minify/min/index.php?$1 [L,NE]
+
+</IfModule>
+
+
+<IfModule mod_expires.c>
+
+    #expire header
+    ExpiresDefault "access plus 6 months"
+
+</IfModule>

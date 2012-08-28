@@ -1,0 +1,28 @@
+
+.container-app{ margin-bottom: 100px; margin-top: 40px;}
+#main-content {padding: 0 30px; margin-top: 40px}
+
+
+/*------------------------------------
+        FORM
+---------------------------------*/
+
+input, textarea, select {
+    box-shadow: none!important;
+}
+
+input{ height: 25px!important;  padding: 3px 10px!important; width: 50%;}
+
+select{ border-radius: 0px;
+        width: 53%;
+}
+input[type=submit]{
+    margin-right: 20px;
+}
+
+input:focus, textarea:focus{
+    box-shadow: none;
+    border: 1px solid #CCCCCC!important;
+}
+
+* { border-radius: 0px!important;}

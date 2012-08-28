@@ -1,0 +1,14 @@
+<?php echo $this->doctype() ?>
+<html>
+    <head>
+        <?php echo $this->headTitle() ?>
+        <?php echo $this->headMeta() ?>
+        <?php echo $this->minifyHeadLink() ?>
+        <?php echo $this->minifyHeadScript(); ?>
+    </head>
+    <body>
+        <div class="container">
+            <div id="contain-wrapper"><?php echo $this->layout()->content; ?></div>
+        </div>
+    </body>
+</html>

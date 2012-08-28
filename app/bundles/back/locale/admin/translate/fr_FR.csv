@@ -1,0 +1,92 @@
+"user";"utilisateur"
+"users";"utilisateurs"
+
+"username";"nom d'utilisateur"
+"lognum";"nombre de connexion"
+"logdate";"dernière connexion"
+
+"firstname";"nom"
+"lastname";"prénom"
+"pass";"mot de passe"
+"email";"adresse mail"
+
+"name";"nom"
+"description";"description"
+"status";"statuts"
+"active";"actif"
+"inactive";"inactif"
+"submit";"soumettre"
+
+
+#display
+"display by store";"affichage par boutique"
+"display by page";"affichage par page"
+"by page";"par page"
+"back the(s)";"revenir sur les"
+"confimation";"confimation"
+"annulation";"annulation"
+"record";"enregistrement"
+"refresh";"rafraichir"
+"on";"sur"
+"previous";"precedent"
+"next";"suivant"
+"operation";"opération"
+"remove";"supprimer"
+"image";"image"
+"delete";"supprimer"
+"option";"option"
+"print";"imprimer"
+"search";"rechercher"
+"blocked";"bloqué"
+#relative au module
+"view the role";"voir le role"
+"view the user";"voir l'utilisateur"
+"change the role";"modifier le role"
+"change the user";"modifier l'utilisateur"
+"add the role";"ajouter un role"
+"add the user";"ajouter un utilisateur"
+"delete the role";"supprimer le role"
+"delete the user";"supprimer l'utilisateur"
+"select all";"selectionner tous"
+
+"the %s %s has been successfully removed";"l'%s %s à été supprimé avec succès"
+"the %s %s has been successfully changed";"l'%s %s à été modifié avec succès"
+"the %s %s has been successfully added";"l'%s %s à été ajouté avec succès"
+
+"removal the %ss %s";"supprimer les %ss %s"
+"delete the %s %s";"supprimer le %s %s"
+"the %ss %s was successfully deleted";"les %ss %s ont été supprimé avec succès"
+
+"%s not remove, it is locked";"interdition de supprimer %s, il est verrouillé"
+"back";"retour"
+
+"les espaces sont autorisés ; la ponctuation n'est pas autorisée à l'exception des points, traits d'union, apostrophes et tirets bas."; "les espaces sont autorisés ; la ponctuation n'est pas autorisée à l'exception des points, traits d'union, apostrophes et tirets bas."
+"Une adresse électronique valide. Le système enverra tous les courriels à cette adresse. L'adresse électronique ne sera pas rendue publique et ne sera utilisée que pour la réception d'un nouveau mot de passe ou pour la réception de certaines notifications désirées."; "Une adresse électronique valide. Le système enverra tous les courriels à cette adresse. L'adresse électronique ne sera pas rendue publique et ne sera utilisée que pour la réception d'un nouveau mot de passe ou pour la réception de certaines notifications désirées."
+"saisissez un mot de passe pour le nouveau compte dans les deux champs.";"saisissez un mot de passe pour le nouveau compte dans les deux champs."
+
+"les utilisateurs qui ne sont pas activés ne seront pas autorisés à entrer dans l'administration"; "les utilisateurs qui ne sont pas activés ne seront pas autorisés à entrer dans l'administration"
+"saisissez un prénom pour le nouveau compte";"saisissez un prénom pour le nouveau compte"
+"saisissez un nom pour le nouveau compte";"saisissez un nom pour le nouveau compte"
+"password no correct";"les mots de passes ne sont pas identiques ou vides"
+"pour modifier le mot de passe actuel, saisissez le nouveau mot de passe dans les deux champs de texte.";"pour modifier le mot de passe actuel, saisissez le nouveau mot de passe dans les deux champs de texte."
+"saisissez votre mot de passe actuel pour changer votre Adresse de courriel ou votre Mot de passe.";"saisissez votre mot de passe actuel pour changer votre Adresse de courriel ou votre Mot de passe."
+"les rôles permettent de définir précisément la sécurité et l'administration. Un rôle définit un groupe d'utilisateurs qui ont certains privilèges tels que définis dans la page des permissions. Par exemple :  modérateur, administrateur, etc.";"les rôles permettent de définir précisément la sécurité et l'administration. Un rôle définit un groupe d'utilisateurs qui ont certains privilèges tels que définis dans la page des permissions. Par exemple :  modérateur, administrateur, etc."
+"les permissions vous permettent de contrôler ce que les utilisateurs peuvent voir et faire sur votre site. Vous pouvez définir un ensemble spécifique de permissions pour chaque rôle.";"les permissions vous permettent de contrôler ce que les utilisateurs peuvent voir et faire sur votre site. Vous pouvez définir un ensemble spécifique de permissions pour chaque rôle."
+
+"current pass";"mot de passe actuel"
+"password false";"mot de passe incorrect"
+
+"the permission has been successfully changed";"les permissions ont été modifiés avec succès"
+
+"bundle";"paquet"
+"module";"module"
+"ressource";"ressource"
+"action";"action"
+
+"home";"accueil"
+"view";"voir"
+"edit";"modifier"
+"add";"ajouter"
+
+"hello";"bonjour"
+"logout";"déconnexion"

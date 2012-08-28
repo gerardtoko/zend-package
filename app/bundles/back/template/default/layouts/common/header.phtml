@@ -1,0 +1,36 @@
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="<?php echo $this->url('dashbord'); ?>"><?php echo $this->projetName ?></a>
+
+            <ul class="nav">
+                <li class="divider-vertical"></li>
+
+                <li> <a href="<?php echo $this->url('dashbord'); ?>">Tableau de Bord</a></li>
+                <li> <a href="<?php echo $this->url('content', array("controller" => "index")); ?>"><?php echo ucfirst($this->t('content')) ?></a></li>
+                <li> <a href="<?php echo $this->url('menu', array("controller" => "menu")); ?>"><?php echo ucfirst($this->t('menu')) ?></a></li>
+                <li> <a href="<?php echo $this->url('admin', array("controller" => "index")); ?>"><?php echo ucfirst($this->t('admin')) ?></a></li>
+                <li> <a href="<?php echo $this->url('configuration', array("controller" => "index")); ?>"><?php echo ucfirst($this->t('confirugation')) ?></a></li> 
+                <li> <a href="<?php echo $this->url('help', array("controller" => "index")); ?>"><?php echo ucfirst($this->t('help')) ?></a></li> 
+                <li class="divider-vertical"></li>
+                <li class="dropdown">
+                    <a href="#"
+                       class="dropdown-toggle"
+                       data-toggle="dropdown">
+                           <?php
+                           $session = Zend_Registry::get('session_app');
+                           $user_data = $session->getUser();
+                           echo sprintf("%s %s", ucfirst($this->t('hello')), ucfirst($user_data['username']));
+                           ?>
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="divider"></li>
+                        <li><a href="<?php echo $this->url('admin_connect', array("controller" => "index", "action" => "logout"), 'front'); ?>"><?php echo ucfirst($this->t('logout')) ?></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

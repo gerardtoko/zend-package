@@ -1,0 +1,63 @@
+<div id="top-content">
+    <div class ="link-top-content">
+        <h1><?php echo ucfirst($this->t($this->nameController)) ?></h1>
+        <span><a href="<?php echo $this->addLink ?>" class="btn btn-primary"><i class="icon-plus-sign icon-white"></i>  <?php echo ucfirst($this->t("add the $this->nameController")) ?></a></span>
+    </div>
+    <?php echo $this->render('common/top-content-right.phtml') ?>
+</div>
+
+<div id="main-content">
+
+    <?php echo $this->render('common/messager.phtml') ?>
+    <?php echo $this->render('common/manage.phtml') ?>
+
+    <form  class="table-form" method="get" action="<?php echo $this->removeall; ?>" enctype="application/x-www-form-urlencoded">
+
+        <table class="table table-striped table-bordered">
+            <colgroup>
+                <col width="2%">
+                <col width="5%">
+                <col width="60%">
+                <col width="10%">
+                <col width="10%">
+            </colgroup>
+            <thead>
+                <tr class="headings">
+                    <th></th>
+                    <th><i class="<?php if ($this->icon_arrow__[0] == 'role_id') echo $this->icon_arrow__[1]; ?>"></i><a class="ajax" href="<?php echo $this->role_id__ ?>" >Id</a></th>
+                    <th><i class="<?php if ($this->icon_arrow__[0] == 'name') echo $this->icon_arrow__[1]; ?>"></i><a class="ajax" href="<?php echo $this->name__ ?>" ><?php echo ucfirst($this->t('name')) ?></a></th>
+
+
+                    <th colspan="3" class="operation"><?php echo ucfirst($this->t('operation')) ?></th>
+                </tr>
+
+            </thead>
+            <tbody>
+                <?php foreach ($this->list as $value) : ?>
+
+                    <tr>
+                        <td>
+                            <input type="checkbox" class="checkbox-element" name="<?php echo $value['name'] ?>-<?php echo $value['role_id'] ?>" value="<?php echo $value['role_id'] ?>">
+                        </td>
+                        <td>
+                            <span class="menu-name number-table" ><a   href="<?php echo $this->editLink ?><?php echo $value['role_id'] ?>"><?php echo $value['role_id'] ?></a></span>
+                        </td>
+
+                        <td>
+                            <span class="menu-name" ><a href="<?php echo $this->editLink ?><?php echo $value['role_id'] ?>"><?php echo ucfirst($value['name']) ?></a></span>
+                        </td>
+
+
+                        <td>
+                            <a   href="<?php echo $this->editLink ?><?php echo $value['role_id'] ?>"><?php echo ucfirst($this->t("view the $this->nameController")) ?></a>
+                        </td>
+
+                        <td>
+                            <a  href="<?php echo $this->editLink ?><?php echo $value['role_id'] ?>"><?php echo ucfirst($this->t("change the $this->nameController")) ?></a>
+                        </td>
+                    </tr>
+                <?php endforeach ?>
+            </tbody>
+        </table>
+    </form>
+</div>

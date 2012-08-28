@@ -1,0 +1,17 @@
+## YAML Template.
+# Configuration MySQL 5
+
+database:
+    adapter: Pdo_Mysql
+    params:
+        hostname: localhost
+        dbname: package
+        username: root
+        password: root
+                
+#auth
+auth:
+    table_name: admin_user
+    identity_column: username
+    credential_column: pass
+    crendtial_treatment: SHA1(?)

@@ -1,0 +1,22 @@
+<?php echo $this->doctype() ?>
+<html>
+    <head>
+        
+        <?php echo $this->headTitle() ?>
+        <?php echo $this->headMeta() ?>
+        <?php echo $this->minifyHeadLink() ?>
+        <?php echo $this->minifyHeadScript(); ?>
+
+        <script language="Javascript">
+            function print_page(){window.print();}
+        </script>
+
+    </head>
+    <body>
+        <div class="container-app-wrapper">
+            <?php echo $this->render('common/header.phtml') ?>
+            <div class="container-app"><?php echo $this->layout()->content ?></div>
+            <?php echo $this->render('common/footer.phtml') ?>
+        </div>
+    </body>
+</html>

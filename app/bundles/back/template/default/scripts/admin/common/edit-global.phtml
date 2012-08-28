@@ -1,0 +1,25 @@
+<div id="main-content">
+       <?php echo $this->render('common/messager.phtml') ?>
+    <div class="operation-wrapper">        
+        <a href="<?php echo $this->refresh_ ?>" class="btn ajax"><i class="icon-refresh"></i> <?php echo ucfirst($this->t('refresh')) ?></a>
+        <a onclick="print_page()" class="btn print-btn"><?php echo $this->t('print') ?></a>                    
+        <span class="submit-btn">
+            <a id="validate-delete" class="btn" href="<?php echo ucfirst($this->t($this->delete_btn)) ?>"><?php echo ucfirst($this->t("delete the $this->nameController")) ?></a>                    
+            <a id="validate" class="btn btn-primary"><?php echo ucfirst($this->t('submit')) ?></a>                    
+        </span>
+    </div>
+    <div class="row-fluid">
+        <div class="span3">
+            <ul class="nav nav-list">
+                <li class="nav-header">
+                    <?php echo ucfirst($this->t('gestion')) ?> <?php echo $this->t($this->nameController) ?>
+                </li>
+                <li class="active">
+                    <a href="#"><i class="icon-th-list"></i><?php echo ucfirst($this->t($this->nameController)) ?></a>
+                </li>
+            </ul>
+
+        </div>
+        <div class="span9"><?php echo $this->form ?></div>
+    </div>
+</div>

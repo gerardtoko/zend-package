@@ -1,0 +1,24 @@
+## YAML Template.
+#cache
+frontend:
+    name : Core
+    options :
+        caching: true
+        cache_id_prefix: factory_
+        lifetime: 14400
+        loggin: true
+        write_control: true
+        automatic_serialization: true
+        automatic_cleaning_factor : true
+        ignore_user_abort: false
+    
+namespaces:
+    default: 
+        name: File
+        options:
+            cache_dir: ../../var/cache/default
+            read_control: true
+            read_control_type: crc32
+            hashed_directory_level: 0
+            file_name_prefix: factory
+            metatadatas_array_max_size: 100

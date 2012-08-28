@@ -1,0 +1,19 @@
+#View configuration
+doctype: HTML5
+
+meta:
+    - {http-equiv: content-language, content: fr}
+    - {http-equiv: X-UA-Compatible, content: "IE=edge,chrome=1"}
+    - {http-equiv: Content-Type, content: "text/html; X charset=utf-8"}
+    - {name: description, content: "factory."}
+    - {name: keywords, content: "package, framework"}
+
+stylesheets:
+    - bootstrap.css
+    - style.css
+
+scripts:
+    - jquery-1.7.2.min.js
+    - jquery-ui-1.8.20.min.js
+    - bootstrap.min.js
+    - script.js

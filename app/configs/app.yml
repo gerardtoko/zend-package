@@ -1,0 +1,46 @@
+#app config
+
+#Base url
+base: /
+
+#namespaces :
+
+#admin :
+admin_name: manager
+projet_name: Factory Package
+default_module: page
+
+#bundles
+bundles:
+    all: [front, back]
+    default:
+        bundle: front
+        module: [page, dashbord]
+        controller: index
+        action: index
+
+
+# plugins
+plugins:
+    core/dispatch: true
+    core/db: true
+    core/session: true
+    core/cache: true
+    core/locale: true
+    locale/maintenance: true
+    core/template: true
+    core/context: true
+    locale/admin_auth: true
+    locale/admin_acl: true
+
+
+#local
+locale_default: fr_FR    
+    
+error: { layout404: layout }
+
+#log
+app_log: true
+
+#mail
+mail_transport: {mail: no-reply@gerardtoko.com, user: "gerardtoko - package"}

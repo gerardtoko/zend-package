@@ -1,0 +1,31 @@
+<div id="top-content">
+    <div class ="link-top-content">
+        <h1><?php echo ucfirst($this->t('configuration')) ?></h1>
+    </div>
+</div>
+
+<div id="main-content">
+
+    <?php if ($this->messager) : ?>
+        <div class="alert alert-<?php echo $this->messager['status'] ?>">
+            <b><?php echo ucfirst($this->messager['message']) ?></b>
+        </div>
+    <?php endif ?>
+
+    <?php foreach ($this->list as $value) : ?>
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr class="headings">
+                    <th><a class="element-col-link" href="<?php echo $value['link']['href'] ?>"><i class="icon-chevron-right"></i><?php echo ucfirst($value['link']['name']) ?></a></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <a class="element-col-link" href="<?php echo $value['link']['href'] ?>"><span class="element-col-description"><?php echo ucfirst($value['description']) ?></span></a>
+                    </td>
+                </tr>
+            <?php endforeach ?>
+        </tbody>
+    </table>
+</div>

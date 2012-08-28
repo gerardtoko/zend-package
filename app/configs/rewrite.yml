@@ -1,0 +1,2 @@
+#app install
+#admin: {bundle: front, module: admin_connect, controller: index, action: index}

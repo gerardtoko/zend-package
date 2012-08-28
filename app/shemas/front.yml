@@ -1,0 +1,11 @@
+modules:
+    page: 
+        index: [index]   
+    error: 
+        index: [index]
+    admin_connect: 
+        index: [index]
+    start: 
+        index: [index]
+
+front_pass: [admin_connect, start]

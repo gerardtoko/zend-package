@@ -1,0 +1,15 @@
+#installation des modules
+
+modules_install:
+    back:
+        - admin
+        - configuration
+        - dashbord
+        - dev
+        - menu
+        - report
+        - help
+    front:
+        - page
+        - admin_connect
+        - error

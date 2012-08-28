@@ -1,0 +1,2 @@
+#event
+#onLogin: [page/test, eventTest, instance]

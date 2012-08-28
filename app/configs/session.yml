@@ -1,0 +1,14 @@
+#sessions
+sessions:
+    #option session
+    options:
+        #absolue directory
+        use_cookies: on
+        use_only_cookies: on
+        use_trans_sid: off
+        strict: on
+        remember_me_seconds: 3600
+        name: user
+        gc_divisor: 1000
+        gc_maxlifetime: 86400
+        gc_probability: 1

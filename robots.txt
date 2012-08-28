@@ -1,0 +1,13 @@
+User-agent: *
+
+# directories
+
+# Files
+Disallow: /CHANGELOG.txt
+Disallow: /INSTALL.txt
+Disallow: /LICENSE.txt
+Disallow: /LICENSE.html
+
+#backend
+Disallow: /back/
+Disallow: /manager/

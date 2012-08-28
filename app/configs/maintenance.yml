@@ -1,0 +1,6 @@
+## YAML Template.
+# maintenance
+# les adresses ips doivent etre entre parenthese
+maintenance:
+    flag: false
+    authorized: ["127.0.0.1"]

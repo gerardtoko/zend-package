@@ -1,0 +1,16 @@
+<?php if ($this->info) : ?>
+    <div class="alert <?php echo $this->info ?>">
+        <a class="close" data-dismiss="alert">×</a>
+        <?php echo $this->infoMessage ?>
+    </div>
+<?php endif ?>
+
+<div class="login-wrapper">
+    <h1 class="login-title"><?php echo $this->projetName; ?></h1>
+
+    <form method="<?php echo $this->form->getMethod() ?>" action="<?php echo $this->form->getAction() ?>" enctype="application/x-www-form-urlencoded" class="well form-inline">
+        <p><?php echo $this->form->name->renderViewHelper() ?></p>
+        <p><?php echo $this->form->password->renderViewHelper() ?></p>
+        <p><?php echo $this->form->submit->renderViewHelper() ?></p>
+    </form>
+</div>
